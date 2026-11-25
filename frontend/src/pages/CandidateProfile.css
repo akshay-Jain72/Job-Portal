@@ -1,0 +1,696 @@
+
+/* ==========================================
+   CANDIDATE PROFILE
+========================================== */
+
+.profile-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.profile-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 24px 60px;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.profile-heading h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 750;
+  color: #172033;
+}
+
+.profile-heading p {
+  margin: 9px 0 0;
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   PROFILE FORM
+========================================== */
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profile-section {
+  background: #fff;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.profile-section h2 {
+  color: #172033;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 25px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* ==========================================
+   FIELDS
+========================================== */
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 22px;
+}
+
+.profile-grid .profile-field {
+  margin-bottom: 0;
+}
+
+.profile-field label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dbe3ed;
+  border-radius: 10px;
+  background: #fff;
+  padding: 13px 14px;
+  color: #1e293b;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.profile-field input {
+  min-height: 47px;
+}
+
+.profile-field textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.7;
+}
+
+.profile-field input::placeholder,
+.profile-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.profile-field small {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   FILE UPLOAD
+========================================== */
+
+.profile-field input[type="file"] {
+  padding: 10px;
+  min-height: auto;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  cursor: pointer;
+}
+
+.profile-field input[type="file"]::file-selector-button {
+  border: none;
+  background: #eaf1ff;
+  color: #2563eb;
+  padding: 9px 13px;
+  border-radius: 7px;
+  margin-right: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-field > p {
+  color: #047857;
+  background: #ecfdf5;
+  padding: 10px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   RESUME ACTIONS
+========================================== */
+
+.candidate-resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.candidate-resume-actions > span {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 10px 13px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.candidate-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+  overflow-wrap: anywhere;
+}
+
+.candidate-resume-btn:hover {
+  background: #dbeafe;
+}
+
+.candidate-resume-download {
+  background: #fff;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.candidate-resume-download:hover {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 5px;
+}
+
+.profile-save,
+.profile-cancel {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 21px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, transform 0.2s;
+}
+
+.profile-save {
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  color: #fff;
+}
+
+.profile-save:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.profile-save:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-cancel {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+
+.profile-cancel:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+.profile-message {
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.profile-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   PROFILE VIEW
+========================================== */
+
+.candidate-profile-view {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* PROFILE TOP CARD */
+
+.candidate-profile-view-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.candidate-profile-avatar {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2563eb, #6366f1);
+  color: #fff;
+  font-size: 35px;
+  font-weight: 750;
+}
+
+.candidate-profile-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.candidate-profile-title h2 {
+  color: #172033;
+  font-size: 25px;
+  font-weight: 750;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.candidate-profile-title p {
+  color: #475569;
+  font-size: 15px;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.candidate-profile-title span {
+  color: #64748b;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* VIEW SECTIONS */
+
+.candidate-profile-view-section {
+  background: #fff;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.candidate-profile-view-section h3 {
+  color: #172033;
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* VIEW GRID */
+
+.candidate-profile-view-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.candidate-profile-view-grid > div {
+  min-width: 0;
+}
+
+.candidate-profile-view-grid strong {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.candidate-profile-view-grid p {
+  color: #1e293b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+/* ABOUT */
+
+.candidate-profile-about {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* VIEW ACTIONS */
+
+.candidate-profile-view-header .profile-save {
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .profile-container {
+    padding: 28px 20px 45px;
+  }
+
+  .profile-section,
+  .candidate-profile-view-section {
+    padding: 23px;
+  }
+
+  .candidate-profile-view-header {
+    padding: 23px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 22px 14px 35px;
+  }
+
+  .profile-heading {
+    margin-bottom: 22px;
+  }
+
+  .profile-heading h1 {
+    font-size: 25px;
+  }
+
+  .profile-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* FORM */
+
+  .profile-form {
+    gap: 15px;
+  }
+
+  .profile-section {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .profile-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .profile-field {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .profile-grid .profile-field {
+    margin-bottom: 0;
+  }
+
+  .profile-field label {
+    font-size: 13px;
+  }
+
+  .profile-field input,
+  .profile-field textarea {
+    font-size: 13px;
+    padding: 12px;
+    border-radius: 9px;
+  }
+
+  .profile-field input {
+    min-height: 45px;
+  }
+
+  .profile-field textarea {
+    min-height: 100px;
+  }
+
+  .profile-field small {
+    font-size: 11px;
+  }
+
+  .profile-field input[type="file"] {
+    font-size: 12px;
+  }
+
+  .profile-field input[type="file"]::file-selector-button {
+    margin-right: 7px;
+    padding: 8px 10px;
+  }
+
+  /* RESUME */
+
+  .candidate-resume-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .candidate-resume-actions > span {
+    text-align: center;
+  }
+
+  .candidate-resume-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* BUTTONS */
+
+  .profile-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .profile-actions button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+  }
+
+  .profile-save,
+  .profile-cancel {
+    font-size: 13px;
+  }
+
+  /* PROFILE VIEW */
+
+  .candidate-profile-view {
+    gap: 15px;
+  }
+
+  .candidate-profile-view-header {
+    padding: 20px;
+    border-radius: 13px;
+    gap: 15px;
+  }
+
+  .candidate-profile-avatar {
+    width: 65px;
+    height: 65px;
+    font-size: 27px;
+    border-radius: 16px;
+  }
+
+  .candidate-profile-title {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .candidate-profile-title h2 {
+    font-size: 20px;
+  }
+
+  .candidate-profile-title p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .candidate-profile-title span {
+    font-size: 12px;
+  }
+
+  .candidate-profile-view-header .profile-save {
+    width: 100%;
+  }
+
+  .candidate-profile-view-section {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .candidate-profile-view-section h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+  }
+
+  .candidate-profile-view-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .candidate-profile-view-grid strong {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .candidate-profile-view-grid p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .candidate-profile-about {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .profile-message {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .profile-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .profile-section,
+  .candidate-profile-view-section {
+    padding: 15px;
+  }
+
+  .candidate-profile-view-header {
+    padding: 16px;
+  }
+
+  .candidate-profile-avatar {
+    width: 55px;
+    height: 55px;
+    font-size: 23px;
+  }
+
+  .candidate-profile-title h2 {
+    font-size: 18px;
+  }
+
+  .profile-actions {
+    gap: 8px;
+  }
+}

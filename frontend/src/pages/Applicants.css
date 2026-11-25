@@ -1,0 +1,999 @@
+
+/* ===========================
+   APPLICANTS PAGE
+=========================== */
+
+.applicants-page {
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+  color: #1e293b;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.applicants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.applicants-header h1 {
+  font-size: 28px;
+  color: #172554;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.applicants-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.applicants-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.app-stat-card {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+  min-width: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(15, 23, 42, 0.07);
+}
+
+.app-stat-card span {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.app-stat-card h2 {
+  font-size: 28px;
+  margin: 12px 0 0;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.applicants-container {
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* ===========================
+   TOOLBAR
+=========================== */
+
+.applicants-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.applicants-toolbar h2 {
+  font-size: 19px;
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.applicants-toolbar p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.applicants-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.applicants-controls input,
+.applicants-controls select {
+  height: 42px;
+  padding: 0 13px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.applicants-controls input {
+  width: 250px;
+}
+
+.applicants-controls select {
+  width: 165px;
+  cursor: pointer;
+}
+
+.applicants-controls input:focus,
+.applicants-controls select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.applicants-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.applicants-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.applicants-table thead {
+  background: #f8fafc;
+}
+
+.applicants-table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.applicants-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+  color: #475569;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+.applicants-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.applicants-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.applicants-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table columns */
+
+.applicants-table th:nth-child(1),
+.applicants-table td:nth-child(1) {
+  width: 28%;
+}
+
+.applicants-table th:nth-child(2),
+.applicants-table td:nth-child(2) {
+  width: 19%;
+}
+
+.applicants-table th:nth-child(3),
+.applicants-table td:nth-child(3) {
+  width: 14%;
+}
+
+.applicants-table th:nth-child(4),
+.applicants-table td:nth-child(4) {
+  width: 15%;
+}
+
+.applicants-table th:nth-child(5),
+.applicants-table td:nth-child(5) {
+  width: 14%;
+}
+
+.applicants-table th:nth-child(6),
+.applicants-table td:nth-child(6) {
+  width: 10%;
+}
+
+/* ===========================
+   CANDIDATE CELL
+=========================== */
+
+.app-candidate-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.app-avatar {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  color: #3730a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app-candidate-cell > div:last-child {
+  min-width: 0;
+}
+
+.app-candidate-cell h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 5px;
+  word-break: break-word;
+}
+
+.app-candidate-cell p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.app-job-name {
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* ===========================
+   APPLICATION STATUS
+=========================== */
+
+.app-status {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.app-status.applied {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.app-status.under-review {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.app-status.shortlisted {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.app-status.hired {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.app-status.rejected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===========================
+   VIEW BUTTON
+=========================== */
+
+.app-view-btn {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.app-view-btn:hover {
+  background: #dbeafe;
+}
+
+/* ===========================
+   EMPTY / ERROR
+=========================== */
+
+.app-empty {
+  text-align: center !important;
+  padding: 45px 20px !important;
+  color: #64748b !important;
+  font-size: 14px !important;
+}
+
+.app-empty button {
+  display: block;
+  margin: 14px auto 0;
+  padding: 9px 16px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.app-empty button:hover {
+  background: #1d4ed8;
+}
+
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+
+.app-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.app-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.app-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.app-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ===========================
+   MODAL HEADER
+=========================== */
+
+.app-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 24px;
+  border-bottom: 1px solid #edf0f5;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.app-modal-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.app-modal-person > div:last-child {
+  min-width: 0;
+}
+
+.app-modal-avatar {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  color: #3730a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.app-modal-person h2 {
+  font-size: 19px;
+  color: #1e293b;
+  margin: 0 0 6px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.app-modal-person p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.app-modal-close {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.app-modal-close:hover {
+  background: #e2e8f0;
+}
+
+/* ===========================
+   MODAL BODY
+=========================== */
+
+.app-modal-body {
+  padding: 24px;
+}
+
+/* Details */
+
+.app-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.app-detail-row span {
+  color: #64748b;
+  font-size: 13px;
+  min-width: 100px;
+}
+
+.app-detail-row strong {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Detail sections */
+
+.app-detail-section {
+  margin-top: 23px;
+}
+
+.app-detail-section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 13px;
+}
+
+.app-detail-section p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.app-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.app-skills span {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+
+/* ===========================
+   RESUME
+=========================== */
+
+.app-detail-section a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #dbeafe;
+  transition: 0.2s ease;
+}
+
+.app-detail-section a:hover {
+  background: #dbeafe;
+}
+
+/* ===========================
+   STATUS SELECT
+=========================== */
+
+.app-detail-section select {
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 13px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.app-detail-section select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.app-detail-section select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app-detail-section > p {
+  margin-top: 10px;
+  color: #2563eb;
+  font-size: 12px;
+}
+
+/* ===========================
+   MODAL FOOTER
+=========================== */
+
+.app-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 24px;
+  border-top: 1px solid #edf0f5;
+  background: #f8fafc;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+.app-reject-btn,
+.app-shortlist-btn,
+.app-hire-btn {
+  padding: 11px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.app-reject-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.app-reject-btn:hover {
+  background: #fecaca;
+}
+
+.app-shortlist-btn {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.app-shortlist-btn:hover {
+  background: #ddd6fe;
+}
+
+.app-hire-btn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.app-hire-btn:hover {
+  background: #15803d;
+}
+
+.app-reject-btn:disabled,
+.app-shortlist-btn:disabled,
+.app-hire-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 1100px) {
+  .applicants-page {
+    padding: 25px;
+  }
+
+  .applicants-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .applicants-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .applicants-controls {
+    width: 100%;
+  }
+
+  .applicants-controls input {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .applicants-page {
+    padding: 80px 16px 25px;
+  }
+
+  .applicants-header {
+    margin-bottom: 20px;
+  }
+
+  .applicants-header h1 {
+    font-size: 24px;
+  }
+
+  .applicants-header p {
+    font-size: 13px;
+  }
+
+  .applicants-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .app-stat-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .app-stat-card span {
+    font-size: 12px;
+  }
+
+  .app-stat-card h2 {
+    font-size: 25px;
+    margin-top: 9px;
+  }
+
+  .applicants-toolbar {
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .applicants-toolbar h2 {
+    font-size: 17px;
+  }
+
+  .applicants-toolbar p {
+    font-size: 12px;
+  }
+
+  .applicants-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .applicants-controls input,
+  .applicants-controls select {
+    width: 100%;
+    height: 43px;
+  }
+
+  .applicants-table {
+    min-width: 900px;
+  }
+
+  .applicants-table th,
+  .applicants-table td {
+    padding: 13px 14px;
+  }
+
+  .app-modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .app-modal {
+    max-height: 95vh;
+    margin: auto 0;
+    border-radius: 12px;
+  }
+
+  .app-modal-header {
+    padding: 20px;
+  }
+
+  .app-modal-body {
+    padding: 20px;
+  }
+
+  .app-modal-footer {
+    padding: 16px 20px;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+  .applicants-page {
+    padding: 75px 12px 20px;
+  }
+
+  .applicants-header h1 {
+    font-size: 22px;
+  }
+
+  .applicants-header p {
+    line-height: 1.6;
+  }
+
+  .applicants-stats {
+    gap: 10px;
+  }
+
+  .app-stat-card {
+    padding: 15px 13px;
+  }
+
+  .app-stat-card span {
+    font-size: 11px;
+  }
+
+  .app-stat-card h2 {
+    font-size: 23px;
+  }
+
+  .applicants-toolbar {
+    padding: 15px;
+  }
+
+  .applicants-table {
+    min-width: 880px;
+  }
+
+  .applicants-table th,
+  .applicants-table td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .app-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 12px;
+  }
+
+  .app-candidate-cell {
+    gap: 9px;
+  }
+
+  .app-candidate-cell h3 {
+    font-size: 12px;
+  }
+
+  .app-candidate-cell p {
+    font-size: 11px;
+  }
+
+  .app-status {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .app-view-btn {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  .app-modal-header {
+    padding: 16px;
+  }
+
+  .app-modal-body {
+    padding: 16px;
+  }
+
+  .app-modal-person {
+    gap: 10px;
+  }
+
+  .app-modal-avatar {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    font-size: 13px;
+  }
+
+  .app-modal-person h2 {
+    font-size: 16px;
+  }
+
+  .app-modal-person p {
+    font-size: 12px;
+  }
+
+  .app-modal-close {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .app-detail-row {
+    gap: 12px;
+  }
+
+  .app-detail-row span {
+    min-width: 80px;
+    font-size: 12px;
+  }
+
+  .app-detail-row strong {
+    font-size: 12px;
+  }
+
+  .app-detail-section h3 {
+    font-size: 14px;
+  }
+
+  .app-detail-section p {
+    font-size: 12px;
+  }
+
+  .app-skills span {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+
+  .app-modal-footer {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .app-reject-btn,
+  .app-shortlist-btn,
+  .app-hire-btn {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+}
+
+/* ===========================
+   EXTRA SMALL MOBILE
+=========================== */
+
+@media (max-width: 360px) {
+  .applicants-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .app-stat-card {
+    padding: 13px 10px;
+  }
+
+  .app-stat-card h2 {
+    font-size: 21px;
+  }
+
+  .applicants-header h1 {
+    font-size: 20px;
+  }
+
+  .app-modal-footer {
+    flex-direction: column;
+  }
+
+  .app-reject-btn,
+  .app-shortlist-btn,
+  .app-hire-btn {
+    width: 100%;
+  }
+}
