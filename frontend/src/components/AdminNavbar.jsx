@@ -31,7 +31,6 @@ function AdminNavbar() {
         const notifications = Array.isArray(response.data)
           ? response.data
           : [];
-          
 
         const unread = notifications.filter(
           (notification) => !notification.read
@@ -69,27 +68,22 @@ function AdminNavbar() {
   const menuItems = [
     {
       to: "/admin-dashboard",
-      icon: "fa-chart-pie",
       label: "Dashboard",
     },
     {
       to: "/admin-users",
-      icon: "fa-users",
       label: "Manage Users",
     },
     {
       to: "/admin-jobs",
-      icon: "fa-briefcase",
       label: "Manage Jobs",
     },
     {
       to: "/admin-reports",
-      icon: "fa-chart-column",
       label: "Reports & Analytics",
     },
     {
       to: "/admin-notifications",
-      icon: "fa-bell",
       label: "Notifications",
     },
   ];
@@ -157,10 +151,6 @@ function AdminNavbar() {
                   : "admin-nav-link"
               }
             >
-              <span className="admin-nav-link-icon">
-                <i className={`fa-solid ${item.icon}`}></i>
-              </span>
-
               <span className="admin-nav-link-text">
                 {item.label}
               </span>

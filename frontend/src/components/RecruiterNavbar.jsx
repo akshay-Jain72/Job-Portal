@@ -63,32 +63,26 @@ function RecruiterNavbar() {
     {
       to: "/recruiter-dashboard",
       label: "Dashboard",
-      icon: "fa-chart-pie",
     },
     {
       to: "/post-job",
       label: "Post Job",
-      icon: "fa-circle-plus",
     },
     {
       to: "/manage-jobs",
       label: "Manage Jobs",
-      icon: "fa-briefcase",
     },
     {
       to: "/applicants",
       label: "Applicants",
-      icon: "fa-users",
     },
     {
       to: "/recruiter-profile",
       label: "Profile",
-      icon: "fa-user",
     },
     {
       to: "/recruiter-notifications",
       label: "Notifications",
-      icon: "fa-bell",
     },
   ];
 
@@ -124,7 +118,6 @@ function RecruiterNavbar() {
                 `recruiter-nav-link ${isActive ? "active" : ""}`
               }
             >
-              <i className={`fa-solid ${item.icon}`}></i>
               <span>{item.label}</span>
 
               {item.to === "/recruiter-notifications" &&
@@ -193,7 +186,6 @@ function RecruiterNavbar() {
                     `recruiter-mobile-link ${isActive ? "active" : ""}`
                   }
                 >
-                  <i className={`fa-solid ${item.icon}`}></i>
                   <span>{item.label}</span>
 
                   {item.to === "/recruiter-notifications" &&

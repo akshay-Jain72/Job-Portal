@@ -161,27 +161,23 @@ function Home() {
         {/* MOBILE MENU */}
         <div className={`home-mobile-menu ${menuOpen ? "open" : ""}`}>
           <a href="#jobs" onClick={closeMenu}>
-            <i className="fa-solid fa-magnifying-glass"></i>
             Find Jobs
           </a>
 
           <a href="#categories" onClick={closeMenu}>
-            <i className="fa-solid fa-layer-group"></i>
+
             Categories
           </a>
 
           <a href="#how-it-works" onClick={closeMenu}>
-            <i className="fa-solid fa-circle-info"></i>
             How it works
           </a>
 
           <a href="#about" onClick={closeMenu}>
-            <i className="fa-solid fa-building"></i>
             About
           </a>
 
           <Link to="/login" onClick={closeMenu}>
-            <i className="fa-solid fa-right-to-bracket"></i>
             Login
           </Link>
 
