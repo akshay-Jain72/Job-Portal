@@ -24,7 +24,7 @@ function AdminReports() {
         }
 
         const response = await axios.get(
-          "http://localhost:5000/api/admin/reports",
+          "https://job-portal-backend-15s4.onrender.com/api/admin/reports",
           {
             headers: {
               Authorization: `Bearer ${token}`,

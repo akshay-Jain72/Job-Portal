@@ -20,7 +20,7 @@ function AdminManageUsers() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:5000/api/admin/users",
+        "https://job-portal-backend-15s4.onrender.com/api/admin/users",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ function AdminManageUsers() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/users/${user._id}/status`,
+        `https://job-portal-backend-15s4.onrender.com/api/admin/users/${user._id}/status`,
         { status: newStatus },
         {
           headers: {
@@ -87,7 +87,7 @@ function AdminManageUsers() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/users/${id}`,
+        `https://job-portal-backend-15s4.onrender.com/api/admin/users/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

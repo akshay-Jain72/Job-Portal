@@ -22,7 +22,7 @@ function JobDetails() {
     const fetchJob = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/jobs/${id}`
+          `https://job-portal-backend-15s4.onrender.com/api/jobs/${id}`
         );
 
         setJob(response.data);
@@ -47,7 +47,7 @@ function JobDetails() {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/saved-jobs",
+          "https://job-portal-backend-15s4.onrender.com/api/saved-jobs",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ function JobDetails() {
 
       if (saved) {
         await axios.delete(
-          `http://localhost:5000/api/saved-jobs/${id}`,
+          `https://job-portal-backend-15s4.onrender.com/api/saved-jobs/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -100,7 +100,7 @@ function JobDetails() {
         setMessage("Job saved list se remove ho gayi.");
       } else {
         await axios.post(
-          `http://localhost:5000/api/saved-jobs/${id}`,
+          `https://job-portal-backend-15s4.onrender.com/api/saved-jobs/${id}`,
           {},
           {
             headers: {
@@ -140,7 +140,7 @@ function JobDetails() {
       setMessage("");
 
       const response = await axios.post(
-        `http://localhost:5000/api/applications/${id}/apply`,
+        `https://job-portal-backend-15s4.onrender.com/api/applications/${id}/apply`,
         {},
         {
           headers: {

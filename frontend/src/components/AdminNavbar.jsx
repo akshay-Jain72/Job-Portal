@@ -20,7 +20,7 @@ function AdminNavbar() {
         if (!token) return;
 
         const response = await axios.get(
-          "http://localhost:5000/api/notifications",
+          "https://job-portal-backend-15s4.onrender.com/api/notifications",
           {
             headers: {
               Authorization: `Bearer ${token}`,

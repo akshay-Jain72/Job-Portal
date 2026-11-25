@@ -22,7 +22,7 @@ function SavedJobs() {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/saved-jobs",
+        "https://job-portal-backend-15s4.onrender.com/api/saved-jobs",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ function SavedJobs() {
   const removeSavedJob = async (jobId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/saved-jobs/${jobId}`,
+        `https://job-portal-backend-15s4.onrender.com/api/saved-jobs/${jobId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

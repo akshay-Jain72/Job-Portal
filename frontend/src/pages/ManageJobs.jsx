@@ -21,7 +21,7 @@ function ManageJobs() {
         setLoading(true);
 
         const response = await axios.get(
-          "http://localhost:5000/api/jobs/recruiter/my-jobs",
+          "https://job-portal-backend-15s4.onrender.com/api/jobs/recruiter/my-jobs",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ function ManageJobs() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`, {
+      await axios.delete(`https://job-portal-backend-15s4.onrender.com/api/jobs/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -133,7 +133,7 @@ function ManageJobs() {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/api/jobs/${editJob._id}`,
+        `https://job-portal-backend-15s4.onrender.com/api/jobs/${editJob._id}`,
         updatedData,
         {
           headers: {

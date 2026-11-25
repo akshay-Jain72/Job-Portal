@@ -20,7 +20,7 @@ function AdminManageJobs() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:5000/api/admin/jobs",
+        "https://job-portal-backend-15s4.onrender.com/api/admin/jobs",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ function AdminManageJobs() {
   const updateJobStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/jobs/${id}/status`,
+        `https://job-portal-backend-15s4.onrender.com/api/admin/jobs/${id}/status`,
         { status },
         {
           headers: {
@@ -78,7 +78,7 @@ function AdminManageJobs() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/jobs/${id}`,
+        `https://job-portal-backend-15s4.onrender.com/api/admin/jobs/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

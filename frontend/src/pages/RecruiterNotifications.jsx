@@ -24,7 +24,7 @@ function RecruiterNotifications() {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/notifications",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications",
         getHeaders()
       );
 
@@ -45,7 +45,7 @@ function RecruiterNotifications() {
         setError("");
 
         const response = await axios.get(
-          "http://localhost:5000/api/notifications",
+          "https://job-portal-backend-15s4.onrender.com/api/notifications",
           getHeaders()
         );
 
@@ -66,7 +66,7 @@ function RecruiterNotifications() {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/notifications/${id}/read`,
+        `https://job-portal-backend-15s4.onrender.com/api/notifications/${id}/read`,
         {},
         getHeaders()
       );
@@ -87,7 +87,7 @@ function RecruiterNotifications() {
   const markAllAsRead = async () => {
     try {
       await axios.put(
-        "http://localhost:5000/api/notifications/mark-all-read",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications/mark-all-read",
         {},
         getHeaders()
       );
@@ -107,7 +107,7 @@ function RecruiterNotifications() {
   const deleteNotification = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/notifications/${id}`,
+        `https://job-portal-backend-15s4.onrender.com/api/notifications/${id}`,
         getHeaders()
       );
 
@@ -127,7 +127,7 @@ function RecruiterNotifications() {
 
     try {
       await axios.delete(
-        "http://localhost:5000/api/notifications/delete-all",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications/delete-all",
         getHeaders()
       );
 

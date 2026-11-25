@@ -4,7 +4,7 @@ import axios from "axios";
 import RecruiterNavbar from "../components/RecruiterNavbar";
 import "./RecruiterDashboard.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://job-portal-backend-15s4.onrender.com/api";
 
 function RecruiterDashboard() {
   const [jobs, setJobs] = useState([]);

@@ -18,7 +18,7 @@ function CandidateNotifications() {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/notifications",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ useEffect(() => {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/notifications/${id}/read`,
+        `https://job-portal-backend-15s4.onrender.com/api/notifications/${id}/read`,
         {},
         {
           headers: {
@@ -71,7 +71,7 @@ useEffect(() => {
   const markAllRead = async () => {
     try {
       await axios.put(
-        "http://localhost:5000/api/notifications/mark-all-read",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications/mark-all-read",
         {},
         {
           headers: {
@@ -95,7 +95,7 @@ useEffect(() => {
   const deleteNotification = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/notifications/${id}`,
+        `https://job-portal-backend-15s4.onrender.com/api/notifications/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -117,7 +117,7 @@ useEffect(() => {
 
     try {
       await axios.delete(
-        "http://localhost:5000/api/notifications/delete-all",
+        "https://job-portal-backend-15s4.onrender.com/api/notifications/delete-all",
         {
           headers: {
             Authorization: `Bearer ${token}`,

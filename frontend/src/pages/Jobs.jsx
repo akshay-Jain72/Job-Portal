@@ -5,7 +5,7 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 import CandidateNavbar from "../components/CandidateNavbar";
 import "./Jobs.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://job-portal-backend-15s4.onrender.com/api";
 
 // Public Navbar
 function PublicNavbar() {

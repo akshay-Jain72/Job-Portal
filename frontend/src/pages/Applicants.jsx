@@ -22,7 +22,7 @@ function Applicants() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/applications/recruiter",
+        "https://job-portal-backend-15s4.onrender.com/api/applications/recruiter",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ function Applicants() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/applications/${id}/status`,
+        `https://job-portal-backend-15s4.onrender.com/api/applications/${id}/status`,
         { status },
         {
           headers: {

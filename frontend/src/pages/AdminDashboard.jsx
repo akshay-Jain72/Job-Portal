@@ -29,7 +29,7 @@ function AdminDashboard() {
         }
 
         const response = await axios.get(
-          "http://localhost:5000/api/admin/dashboard",
+          "https://job-portal-backend-15s4.onrender.com/api/admin/dashboard",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/admin/dashboard",
+        "https://job-portal-backend-15s4.onrender.com/api/admin/dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,

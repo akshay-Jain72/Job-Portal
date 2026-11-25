@@ -30,7 +30,7 @@ function CandidateDashboard() {
 
 
         const response = await axios.get(
-          "http://localhost:5000/api/applications/candidate/dashboard",
+          "https://job-portal-backend-15s4.onrender.com/api/applications/candidate/dashboard",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import CandidateNavbar from "../components/CandidateNavbar";
 import "./CandidateProfile.css";
 
-const API = "http://localhost:5000/api/profile";
+const API = "https://job-portal-backend-15s4.onrender.com/api/profile";
 
 function CandidateProfile() {
   const navigate = useNavigate();
@@ -207,7 +207,7 @@ function CandidateProfile() {
   };
 
   const resumeUrl = resumePath
-    ? `http://localhost:5000${resumePath}`
+    ? `https://job-portal-backend-15s4.onrender.com${resumePath}`
     : "";
 
   if (loading) {
