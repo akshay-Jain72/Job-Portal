@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RecruiterNavbar from "../components/RecruiterNavbar";
 import "./RecruiterDashboard.css";
@@ -7,6 +8,8 @@ import "./RecruiterDashboard.css";
 const API = "https://job-portal-backend-15s4.onrender.com/api";
 
 function RecruiterDashboard() {
+  const navigate = useNavigate();
+
   const [jobs, setJobs] = useState([]);
   const [applicants, setApplicants] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -187,9 +190,7 @@ function RecruiterDashboard() {
 
             <button
               className="dashboard-view-all"
-              onClick={() =>
-                window.location.href = "/manage-jobs"
-              }
+              onClick={() => navigate("/manage-jobs")}
             >
               View All
             </button>
@@ -270,9 +271,7 @@ function RecruiterDashboard() {
 
             <button
               className="dashboard-view-all"
-              onClick={() =>
-                window.location.href = "/applicants"
-              }
+              onClick={() => navigate("/applicants")}
             >
               View All
             </button>
